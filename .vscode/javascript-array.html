@@ -1,0 +1,125 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // sorting an array ->
+        /*
+            var arr=["Flipkart","Myntra","mesho","Amazone","ajio"];
+           document.write(arr.sort());
+            var a1=[1,12,3,123,34];
+           document.write(a1.sort(function(a,b){return(a-b)}));
+           */
+
+           //Empty an Array ->
+           
+           a=[5,10,20,25];
+
+        // first method
+         /*  a=[];
+           console.log(a); */
+
+           //second method
+         /*  a.length=0;
+           console.log(a); */
+
+           //third method
+        /*   a.splice(0,a.length);
+           console.log(a) */
+
+        //    console.log(Array.isArray(a));
+        //    var v=10;
+        //    console.log(typeof(v));
+ 
+
+        // adding element at last index->
+     /*   a.push(30);
+        console.log(a);
+        
+
+        a[a.length]=35;
+        console.log(a);
+        console.log( a.indexOf(30));   */
+
+
+      // check array contains the value or not ->
+    /*  if(a.includes(25))
+      {
+        console.log("number  is present");
+      }
+      else{
+        console.log("that number is not present");
+      } */
+   
+
+      // length of arrays
+      /*
+      var a1=[,,,]; //3 values
+      var a2=new Array(3); // 3 values
+      var a3=[[11,22,33],[44,55,66]]; //2 value
+       a3[0].length; //3 values
+      console.log(a1.length);
+      console.log(a2.length);
+      console.log(a3.length);
+      console.log(a3[0].length);
+     */
+ // shift(delete from front) and unshift(add in front)
+     var u=[];
+     u.unshift(1); // it adds 1 to the front
+     console.log(u);
+     u.unshift(22); // it will add 22 before 1
+     console.log(u);
+     u.shift(); //ans 1
+     console.log(u);
+     u.unshift(33,[44,55]); //33,44,55,1
+     console.log(u);
+     u.shift(); // 44,55,1
+     console.log(u);
+     u.shift(); //ans is 1;
+     console.log(u);
+
+     // sum of array element
+    /* let z=[5,10,15,20,25];
+     let sum=0;
+     for(let i=0;i<=a.length;i++)
+     {
+        sum+=z[i];
+     }
+     console.log(sum); */
+
+     // other way
+     /*
+     var sum=z.reduce((a,b)=>{ return a+b;});
+     console.log(sum);
+     */
+     
+     
+     /*var string="programming";
+     
+     var str=str.split('');;
+     var count=0;
+     for(let i=0;i<str.length;i++)
+     {
+        for(let j=i+1;j<str.length;j++)
+        {
+            if(str[i]=str[j]&& str[i]!='')
+            {
+              j++;
+              str[j]='0';
+            }
+            else{
+                count++;
+               // str1.push(str[i]);
+            }
+        }
+        if(count=1 && str[i]!='0')
+        {
+          console.log(str[i]);
+        }
+     }
+ console.log(str1);
+ */
+        </script>
+    </body>
+</html>

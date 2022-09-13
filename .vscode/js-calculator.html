@@ -1,0 +1,135 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            var op=prompt('which operation do you want to perform fb for fibonacci series pf for prime factor mt for multipication table pd for palindrome h for hcf');
+            switch(op)
+            {
+                case "fb":
+                    FibonacciSeries();
+                    break;
+                case "pf":
+                    PrimeFactors();
+                    break;
+                 case "pd":
+                    Palindrome();
+                    break;
+                case "mt":
+                    MutipicationTable();
+                    break;
+                case "h":
+                    Hcf();
+                    break;
+                default:
+                    console.log("your entered code is wrong please enter correct code");
+
+            }
+            function FibonacciSeries()
+            {
+                var a=parseInt(prompt("enter  how many number  you want print"));
+                var x=0;
+                var y=1;
+                var z;
+                var i;
+                console.log("Fibonacci Series")
+                for(i=1;i<=a;i++)
+                {
+                    console.log(x);
+                    z=x+y;
+                    x=y;
+                    y=z;
+                    
+                }
+            }
+            function PrimeFactors()
+            {
+                var n=parseInt(prompt("enter  the number"));
+                function prime(num)
+                {
+              for(let i=2;i<=Math.sqrt(num);i++)
+              {
+                if(num%i===0)
+                {
+                    return false;
+                }
+              }
+              return true;
+            }
+              const res=[];
+              for(let i=2;i<n;i++)
+              {
+                  while(prime(i) && n%i===0)
+                  {
+                    if(!res.includes(i))
+                    { 
+                    res.push(i);
+                    n/=i;
+                    }
+                  }
+                  console.log(res);
+              }
+              return res;
+              //other way
+              /*
+              var n=prompt("enter vlue");
+              var fact=[];
+              let div=2;
+              while(n>=2)
+              {
+                if(n%div==0)
+                {
+                    fact.push(div);
+                    n=n/div;
+                }
+                else{
+                    div++;
+                }
+              }
+              return fact;
+                  */
+           
+            }
+
+            function Palindrome()
+            {
+                var str=prompt("enter a string or number");
+                var len=str.length;
+                for(let i=0;i<len/2;i++)
+                {
+                    if(str[i]!==str[len-1-i])
+                    {
+                        alert("its not a palindrome");
+                    }
+                }
+                alert(" it is plindrom");
+                /* other way
+                const b=str.split('').reverse().join('');
+                return str===b; */
+            }
+            function MutipicationTable()
+            {
+                var n=prompt("enter the number who's table you want");
+                for(let i=1;i<=10;i++)
+                {
+                    console.log(n+"x"+i+"="+n*i);
+                }
+            }
+
+            function Hcf()
+            {
+                var a=prompt('enter fisrt number');
+                var b=prompt('enter second number');
+                let hcf;
+                for(let i=1;i<=a && i<=b;i++)
+                {
+                    if(a%i==0&&b%i==0)
+                    {
+                        hcf=i;
+                    }
+                }
+                console.log("Hcf is "+hcf);
+            }
+
+        </script>
+    </body>
+</html>

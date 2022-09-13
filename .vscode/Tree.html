@@ -1,0 +1,167 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+       /*     class TreeNode{
+                constructor(value)
+                {
+                    this.value=value;
+                    this.descendants=[];
+                }
+            }
+            const t1=new TreeNode('Harsh');
+            const t2=new TreeNode('Bhura');
+            const t3=new TreeNode('Jain');
+            const t4=new TreeNode('Manish');
+            t1.descendants.push(t2);
+            t2.descendants.push(t3,t4);
+            console.log(t1); */
+
+            var left=0;
+            var right=1;
+            class TreeNode{
+                constructor(value)
+                {
+                    this.value=value;
+                    this.left=null;
+                    this.right=null;
+                }
+            }
+
+            class BST{
+                constructor()
+                {
+                    this.root=null;
+                }
+                insert(value)
+                {
+                    var t1=new TreeNode(value);
+                    if(this.root===null)
+                    {
+                        this.root=t1;
+                    }
+                    else
+                    {
+                        this.insertNode(this.root,t1);
+                    }
+                }
+                insertNode(node,newNode)
+                {
+                    if(newNode.value<node.value)
+                    {
+                        if(node.left===null)
+                       {
+                        node.left=newNode;
+                       }
+                       else{
+                        this.insertNode(node.left,newNode);
+                       }
+                    }
+                    else{
+                        if(node.right===null)
+                       {
+                        node.right=newNode;
+                       }
+                       else{
+                        this.insertNode(node.right,newNode);
+                       }
+                    }
+                }
+                searchItem(value){
+                let currentNode = this.root;
+                while(currentNode !== null){
+                    if(value === currentNode.value){
+                        return true;
+                    }
+                    else if(value < currentNode.value){
+                        currentNode = currentNode.left;
+                    }
+                    else{
+                        currentNode = currentNode.right
+                    }
+                }
+                return false;
+            }
+         DeleteNode(value)
+           {
+            root=delete(root,value);
+          }
+            delete(root,value){
+                if(root===null)
+                {
+                    return false;
+                }
+                if(value<root)
+                {
+                   root.left=delete(root.left,value);
+                   return root;
+                }
+                else if(value>root)
+                {
+                    root.right=delete(root.right,value);
+                   return root;
+                }
+                else{
+                    if(root.left===null && root.right===null)
+                    {
+                        root=null;
+                        return root;
+                    }
+                    if(root.left===null)
+                    {
+                        return root.right;
+                    }
+                    if(root.right===null)
+                    {
+                        return root.left;
+                    }
+                    let current=root.right;
+                    while(current.left!==null)
+                    {
+                        current=current.left;
+                    }
+                  root.value=current.value;
+                  root.right=delete(root.right,current.value);
+                  return root;
+                }
+            }
+            Min(node)
+            {
+                if(node===null)
+                {
+                    return null;
+                }
+                current=node;
+                while(current.left!==null)
+                {
+                    current=current.left;
+                }
+                return current.value;
+            }
+            Max(node)
+            {
+                if(node===null)
+                {
+                    return null;
+                }
+                current=node;
+                while(current.right!==null)
+                {
+                    current=current.right;
+                }
+                return current.value;
+            }
+          }
+           
+       const bst1=new BST();
+       bst1.insert(2);
+       bst1.insert(4);
+       bst1.insert(6);
+       bst1.insert(8);
+       bst1.insert(1);
+       console.log(bst1); 
+      console.log(bst1.searchItem(6));
+      console.log(bst1.delete(2,1));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <head></head>
+    <body>
+   <h3>Accessing Element in Dom</h3>
+   <h4>ID (#demo)</h4>
+   <div id="demo">
+      access id
+   </div>
+
+   <h4>Class (.demo)</h4>
+   <div class="demo">
+  access class 1
+   </div>
+   <div class="demo">
+    access class 2
+   </div>
+   <div class="demo">
+    access class 3
+    </div>
+   <div class="demo">
+    access class 4
+    </div>
+
+    <h4>Tag (article)</h4>
+    <article>
+    access article 1
+    </article>
+    <article>
+    access article 2
+    </article>
+        <script>
+            
+            var a=document.getElementById("demo");
+            a.style.border="2px solid purple";
+            
+            var b=document.getElementsByClassName("demo");
+            for(let i=0;i<b.length;i++)
+            {
+            b[i].style.border="2px solid orange";
+            }
+
+            var c=document.getElementsByTagName("article");
+            for(let i=0;i<c.length;i++)
+            {
+            c[i].style.border="2px solid blue";
+            }
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+<body>
+  <button id="button">click me</button>
+    <script>
+        function ab()
+        {
+            alert("hello");
+        }
+        function cd()
+        {
+            alert("hey");
+        }
+        var b=document.getElementById("button");
+        function col()
+        {
+         b.style.backgroundColor="red";   
+        }
+        function row()
+        {
+            b.style.backgroundColor="black"; 
+            b.style.color="white";
+            b.style.fontSize="20px";
+        }
+     //   b.onclick=ab; // it prints last one only
+      //  b.onclick=cd;
+      b.addEventListener("click",ab);// it prints both 
+      b.addEventListener("click",cd);
+      b.addEventListener("mouseover",col);
+      b.addEventListener("mouseout",row);
+    </script>
+</body>
+</html>

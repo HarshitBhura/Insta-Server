@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: blue;
+    text-align: center;
+}
+.top-menu a{
+    color: #f1f1f1 ;
+    margin: 5px;
+}
+.middle-menu a{
+    color: #eb9411;
+    margin: 5px;
+}
+.hero h1{
+    text-align: center;
+}
+.hero img{
+    width: 300px;
+}

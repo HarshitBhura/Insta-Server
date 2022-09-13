@@ -1,0 +1,37 @@
+<html>
+    <head>
+
+    </head>
+<body>
+    <div id="a">
+        <p id="b">yavhbvd</p>
+        <p id="c"><span>bufjkxjkb</span></p>
+        <button>click me</button>
+        <ol>
+            <li>11</li>
+            <li>22</li>
+        </ol>
+    </div>
+    <script>
+        var x= document.getElementById("a");
+        console.log(x.firstElementChild.nodeName)
+        x.firstElementChild.style.color="red";
+        x.lastElementChild.style.backgroundColor="yellow";
+        if(x.hasChildNodes())
+        {
+            var nodes=x.childNodes;
+            for(var i=0;i<nodes.length;i++)
+            {
+                console.log(nodes[i].nodeName);
+            }
+        }
+        var ch=document.getElementById("c");
+        console.log(ch.parentNode.nodeName);
+        ch.parentNode.style.backgroundColor="blue";
+        ch.firstElementChild.style.backgroundColor="green";
+        ch.previousElementSibling.style.color="pink";
+        
+
+    </script>
+</body>
+</html>

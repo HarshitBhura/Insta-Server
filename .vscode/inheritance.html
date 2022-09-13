@@ -1,0 +1,111 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+          /*  class Animal{
+                constructor(legs)
+                {
+                    this.legs=legs;
+                }
+                walk()
+                {
+                    console.log("walking on "+this.legs+" legs");
+                }
+                static greet()
+                {
+                    console.log("hello");
+                }
+            }
+            class Bird extends Animal{
+               constructor(legs,fo)
+               {
+                super();
+                this.legs=legs;
+                this.fo=fo;
+               }
+               fly()
+               {
+                console.log("flying");
+               }
+               food()
+               {
+                console.log(this.fo);
+               }
+            }
+            let b=new Bird(2,"insects");
+            b.walk();
+            b.fly();
+            b.food();
+           Bird.greet(); */
+         
+         
+         /*  class S extends Array{
+            add(a)
+            {
+                super.push(a);
+            }
+            remove()
+            {
+                return super.shift();
+            }
+            empty()
+            {
+                return this.length===0;
+            }
+           }
+           var n=new S();
+           n.add(91);
+           console.log(n);
+           n.add(92);
+           console.log(n);
+           n.add(93);
+           console.log(n);
+           n.remove();
+           console.log(n);
+           n.remove();
+           console.log(n);
+           n.remove();
+           console.log(n);
+           while(!n.empty())
+           {
+            console.log("n is not empty");
+           }  */
+//Multi Level Inheritence
+           class GF{
+            constructor(food)
+            {
+             this.food=food;
+            }
+            eat()
+            {
+               console.log("GrandFather has eaten");
+            }
+           }
+           class F extends GF{
+            constructor(food)
+            {
+                super(food);
+            }
+            eat1()
+            {
+               console.log("Father has eaten");
+            }
+           }
+           class S extends F{
+            constructor(food)
+            {
+                super(food);
+            }
+            eat2()
+            {
+               console.log("Son has eaten");
+            }
+           }
+           var s=new S("food");
+           s.eat();
+        </script>
+    </body>
+</html>

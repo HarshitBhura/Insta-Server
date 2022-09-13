@@ -1,0 +1,5 @@
+{
+    "open-in-browser.default": "chrome",
+    "terminal.integrated.sendKeybindingsToShell": true,
+    "git.ignoreLimitWarning": true
+}

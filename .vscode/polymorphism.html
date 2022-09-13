@@ -1,0 +1,158 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+    /*        class Shape{
+             area()
+             {
+                return 0;
+             }
+             perimeter()
+             {
+                return 0;
+             }
+             toString()
+             {
+                return Object.getPrototypeOf(this).constructor.name;
+             }
+            }
+            class Circle extends Shape{
+              constructor(r)
+              {
+                super();
+                this.radius=r;
+              }
+              area()
+             {
+                return Math.PI*this.radius**2;
+             }
+             perimeter()
+             {
+                return Math.PI*this.radius*2;
+             }
+            }
+            class Rectangle extends Shape{
+              constructor(h,w)
+              {
+                super();
+                this.height=h;
+                this.width=w;
+              }
+              area()
+             {
+                return this.height*this.width;
+             }
+             perimeter()
+             {
+                return 2*(this.height+this.width);
+             }
+            }
+
+function cumulateShapes(shapes) {
+  return shapes.reduce((sum, shape) => {
+    if (shape instanceof Shape) {
+      console.log(`Shape: ${shape.toString()} - area: ${shape.area()}`);
+      console.log(
+        `Shape: ${shape.toString()} - perimeter: ${shape.perimeter()}`
+      );
+      return sum + shape.area();
+    }
+    throw Error("Bad argument shape.");
+  }, 0);
+}
+
+const shapes = [new Circle(3), new Rectangle(2, 3)];
+
+console.log(cumulateShapes(shapes));
+
+            
+*/
+/* working of reduce function
+            const a=[1,2,3,4,5];
+            function S(sum,i)
+            {
+                return sum+i;
+            }
+            var b=a.reduce(S);
+            console.log(b); */
+
+// working of arrow(=>) function
+/*var x=(a,b)  =>a*b;
+console.log(x(5,6)); */
+
+// another example
+/*
+var x1=function(w,h){
+    var area=w*h;
+    console.log(area);
+} */
+/*
+var x1=(w,h)=>{
+    var area=w*h;
+    console.log(area);
+}
+x1(10,20);
+
+var x3=()=>{
+    console.log("hello");
+}
+x3();
+
+var x4=y=>{
+    console.log(y**2);
+}
+x4(5);
+
+var x5=10;
+let x6=(x5>5)? ()=>console.log("bigger number") : ()=>console.log("lesser number");
+x6(); */
+ /* another example
+function harsh(){
+ this.name="harshit";
+ this.age=23;
+ this.hobby=function(){
+    console.log("its night time");
+    console.log("age "+this.age);
+    function Exp(){
+    console.log("Experience "+this.age);
+    }
+    Exp();
+ }
+}
+let obj=new harsh();
+obj.hobby();
+*/
+/* abve function with arrow fuction check the difference at Exp method.it will call parent value in Exp function but in above it give undefined
+function harsh(){
+ this.name="harshit";
+ this.age=23;
+ this.hobby=function(){
+    console.log("its night time");
+    console.log("age "+this.age);
+    let Exp=()=>{
+    console.log("Experience "+this.age);
+    }
+    Exp();
+ }
+}
+let obj1=new harsh();
+obj1.hobby();
+*/
+ let s=function(){
+    console.log(arguments);
+ }
+ s(10,20,30);
+
+/* let s1=()=>{
+    console.log(arguments);// arrow fxn doesn't take arguments
+ }
+ s1(12,20,30);*/
+ let s1=(...a)=>{
+    console.log(a);// arrow fxn doesn't take arguments
+ }
+ s1(12,20,30);
+
+
+        </script>
+    </body>
+</html>

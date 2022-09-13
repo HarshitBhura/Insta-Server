@@ -1,0 +1,94 @@
+<htm>
+    <head></head>
+    <body>
+            <form name="contact" onsubmit="return validateForm()">
+                <h2>Application Form</h2>
+                <div class="row">
+                    <label>Full Name</label>
+                    <input type="text" name="name">
+                    <div class="error" id="nameErr"></div>
+                </div>
+                <div class="row">
+                    <label>Email Address</label>
+                    <input type="text" name="email">
+                    <div class="error" id="emailErr"></div>
+                </div>
+                <div class="row">
+                    <label>Mobile Number</label>
+                    <input type="text" name="mobile" maxlength="10">
+                    <div class="error" id="mobileErr"></div>
+                </div>
+                <div class="row">
+                    <label>Country</label>
+                    <select name="country">
+                        <option>Select</option>
+                        <option>Australia</option>
+                        <option>India</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                    </select> 
+                    <div class="error" id="countryErr"></div>
+                </div>
+                <div class="row">
+                    <label>Gender</label>
+                    <div class="form-inline">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label> 
+                    </div>
+                    <div class="error" id="genderErr"></div>
+                </div>
+                <div class="row">
+                    <label>Hobbies <i>(Optional)</i></label>
+                    <div class="form-inline">
+                        <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                        <label><input type="checkbox" name="hobbies[]" value="movies"> Movies</label>
+                        <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>  
+                    </div>
+                </div>        
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>            
+            
+        <script>
+            function printError(elemId,hintMsg)
+            {
+           document.getElementById("elemId").innerHTML=hintMsg;
+            }
+
+        function validateForm()
+        {
+         var n1=document.contact.name.value;
+         var email=document.contact.name.value;
+         var mob=document.contact.name.value;
+         var country=document.contact.name.value;
+         var gen=document.contact.name.value;
+         var hobbies=[];
+         var c=document.getElementByName("hobbies[]");
+         for(i=0;i<c.length;i++)
+         {
+            if(c[i].checked)
+            {
+                hobbies.push(c[i].value);
+            }
+         }
+        }
+        var nameErr=emailErr=mobileErr=countryErr=genderErr=true;
+        if(name=="")
+        {
+            printError("nameErr","please enter your name");
+        }
+        else{
+            var regex=/^[a-zA-Z\s]+$/;
+            if(regex.test[name]===false)
+            {
+                printError("nameErr","please enter a valid name");
+            }
+            else{
+                printError("nameErr","");
+                nameErr=false;
+            }
+        }
+        </script>
+    </body>
+</htm>

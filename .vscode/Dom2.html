@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body>
+        <div id="a">
+            <p>Heyy </p>
+            <p>how are you</p>
+        </div>
+        <h2>sample heading</h2>
+        <div id="b">
+            <h1>original content</h1>
+            <p id="para"> bkdgxfjhkg hjg</p>
+        </div>
+        <script>
+         /*   var v=document.getElementById("a").innerHTML;// gives access of div id="a"
+            alert(v); */
+        //    var v1=document.getElementById("a");
+        //    v1.innerHTML="<h1>heading</h1>";//changing content using inner html
+
+          var v2=document.getElementById("b");
+           v2.insertAdjacentHTML("beforebegin","<h1>first-copy</h1>");
+           v2.insertAdjacentHTML("afterbegin","<h1>second-copy</h1>");
+           v2.insertAdjacentHTML("beforeend","<h1>third-copy</h1>");
+           v2.insertAdjacentHTML("afterend","<h1>fourth-copy</h1>"); 
+           
+
+
+           var v3=document.getElementById("b"); // if we know parent node
+           //alert(v3.innerHTML);
+           var v4=document.getElementById("para");
+           v3.removeChild(v4);
+
+        //   v4.parentNode.removeChild(v4); //other way to remove child node
+           v5=document.createElement("p")
+           v6=document.createTextNode("created text node");
+           v5.appendChild(v6);
+
+           var v7=document.getElementById("b");
+           v7.removeChild(v5,);
+        //replace
+        
+        </script>
+    </body>
+</html>
